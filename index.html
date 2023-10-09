@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Me</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center; /* Center the content */
+        }
+        img {
+            height: 80%;
+            width: 80%;
+            z-index: 0;
+            margin-top: 20%;
+            opacity: 0; /* Start with 0 opacity */
+            transition: opacity 1s ease, transform 1s ease; /* Add fade-in and scale-up animations */
+        }
+        input {
+            margin-top: 20px; /* Adjust margin as needed */
+            padding: 10px;
+            background-color: red; /* Change button background color */
+            color: white; /* Change button text color */
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="—Pngtree—rose simulation plant romance_6524921.png">
+    <br>
+    <input id="btn" type="button" value="Love me na" onclick="love()">
+    
+    <script>
+        function love() {
+            // Get references to the elements
+            var btn = document.getElementById("btn");
+            var image = document.getElementById("image");
+            
+            // Hide the button
+            btn.style.display = "none";
+            
+            // Show the image with a fade-in and scale-up animation
+            image.style.opacity = "1"; // Fade in
+            image.style.transform = "scale(1.2)"; // Scale up
+
+            // Optional: Add a class for continuous animation
+            image.classList.add("animated");
+
+            // You can remove the animation class after a delay if needed
+            setTimeout(function() {
+                image.classList.remove("animated");
+            }, 1000); // Remove after 1 second (adjust as needed)
+        }
+    </script>
+</body>
+</html>
